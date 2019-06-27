@@ -25,6 +25,11 @@ public class CustomerController {
     @Autowired
     BookingRepository bookingRepository;
 
+    @GetMapping
+    public List<Customer> getAllCustomers(){
+        return customerRepository.findAll();
+    }
+
     @GetMapping(value = "/bookings/course/{id}")
     public List<Customer> findCustomerByCourse(@PathVariable Long id){
         return customerRepository.findCustomerByCourse(id);

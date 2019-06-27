@@ -54,7 +54,7 @@ public class BoookingLabApplicationTests {
 	@Test
 	public void findBookingByDate(){
 		List<Booking> found = bookingRepository.findBookingByDate("2019-11-10");
-		assertEquals(3L, found.get(0).getId());
+		assertEquals(3, (long) found.get(0).getId());
 	}
 
 }
